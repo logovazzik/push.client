@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<div class="layout">
+
+</div>
+<div class="container">
+    <div class="card-panel teal lighten-2">This is a card panel with a teal lighten-2 class</div>
+
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBXH1N-C-3Gi80tglAOQccdurbjukhu2Io",
+        authDomain: "logovazzik-otn.firebaseapp.com",
+        databaseURL: "https://logovazzik-otn.firebaseio.com",
+        projectId: "logovazzik-otn",
+        storageBucket: "logovazzik-otn.appspot.com",
+        messagingSenderId: "314128418145"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="scripts/app.js"></script>
+<script>
+    var view = new View();
+    view.initialize();
+</script>
+<button class="btn waves-effect waves-light red lighten-3">Subscribe</button>
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+</body>
+</html>
