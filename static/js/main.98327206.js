@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "http://logovazzik.github.io/push.client/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 291);
@@ -41079,7 +41079,7 @@ var subscribers = {
 /* 514 */
 /***/ (function(module, exports) {
 
-module.exports = {"API":{"host":{"release":"http://localhost:3000/","dev":"https://logovazzik-push.herokuapp.com/"},"endpoints":{"subscriptions":{"update":"api/subscriber/{token}/subscription","delete":"api/subscriber/{token}/subscription/{uid}","get":"api/subscriber/{token}/subscriptions"},"subscriber":{"get":"api/subscriber/{token}","add":"api/subscriber","refresh":"api/subscriber/{token}"},"metadata":"api/subscriber/subscriptions/metadata"}}}
+module.exports = {"API":{"host":{"dev":"http://localhost:3000/","release":"https://logovazzik-push.herokuapp.com/"},"endpoints":{"subscriptions":{"update":"api/subscriber/{token}/subscription","delete":"api/subscriber/{token}/subscription/{uid}","get":"api/subscriber/{token}/subscriptions"},"subscriber":{"get":"api/subscriber/{token}","add":"api/subscriber","refresh":"api/subscriber/{token}"},"metadata":"api/subscriber/subscriptions/metadata"}}}
 
 /***/ }),
 /* 515 */
@@ -53011,7 +53011,7 @@ var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
 function register() {
     if ("production" === 'production' && 'serviceWorker' in navigator) {
         // The URL constructor is available in all browsers that support SW.
-        var publicUrl = new URL("", window.location.toString());
+        var publicUrl = new URL("http://logovazzik.github.io/push.client", window.location.toString());
         if (publicUrl.origin !== window.location.origin) {
             // Our service worker won't work if PUBLIC_URL is on a different origin
             // from what our page is served on. This might happen if a CDN is used to
@@ -53019,7 +53019,7 @@ function register() {
             return;
         }
         window.addEventListener('load', function () {
-            var swUrl = "" + "/service-worker.js";
+            var swUrl = "http://logovazzik.github.io/push.client" + "/service-worker.js";
             if (!isLocalhost) {
                 // Is not local host. Just register service worker
                 registerValidSW(swUrl);
@@ -65970,4 +65970,4 @@ if (true) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.b5af7b80.js.map
+//# sourceMappingURL=main.98327206.js.map
