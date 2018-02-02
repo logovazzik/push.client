@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://logovazzik.github.io/push.client/";
+/******/ 	__webpack_require__.p = "https://logovazzik.github.io/push.client/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 291);
@@ -53011,7 +53011,7 @@ var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
 function register() {
     if ("production" === 'production' && 'serviceWorker' in navigator) {
         // The URL constructor is available in all browsers that support SW.
-        var publicUrl = new URL("http://logovazzik.github.io/push.client", window.location.toString());
+        var publicUrl = new URL("https://logovazzik.github.io/push.client", window.location.toString());
         if (publicUrl.origin !== window.location.origin) {
             // Our service worker won't work if PUBLIC_URL is on a different origin
             // from what our page is served on. This might happen if a CDN is used to
@@ -53019,7 +53019,7 @@ function register() {
             return;
         }
         window.addEventListener('load', function () {
-            var swUrl = "http://logovazzik.github.io/push.client" + "/service-worker.js";
+            var swUrl = "https://logovazzik.github.io/push.client" + "/service-worker.js";
             if (!isLocalhost) {
                 // Is not local host. Just register service worker
                 registerValidSW(swUrl);
@@ -65970,4 +65970,4 @@ if (true) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.98327206.js.map
+//# sourceMappingURL=main.97d39c82.js.map
