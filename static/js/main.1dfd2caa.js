@@ -32816,6 +32816,7 @@ var __extends = (this && this.__extends) || (function () {
 var R = __webpack_require__(90);
 
 
+var numberPattern = /^[+-]?([0-9]+([^\D][\.][0-9]*)?|[^\D][\.][0-9]+)$/;
 var SubscriptionComponent = /** @class */ (function (_super) {
     __extends(SubscriptionComponent, _super);
     function SubscriptionComponent(props) {
@@ -32825,7 +32826,9 @@ var SubscriptionComponent = /** @class */ (function (_super) {
         _this._prevProps = {};
         _this.handleDelete = _this.handleDelete.bind(_this);
         _this.handleValueChange = _this.handleValueChange.bind(_this);
+        _this.handleValueBlur = _this.handleValueBlur.bind(_this);
         _this.handleDeviationChange = _this.handleDeviationChange.bind(_this);
+        _this.handleDeviationBlur = _this.handleDeviationBlur.bind(_this);
         _this.typeChangeHandle = _this.typeChangeHandle.bind(_this);
         _this.comparisonTypeChangeHandle = _this.comparisonTypeChangeHandle.bind(_this);
         _this.handleChangeActivation = _this.handleChangeActivation.bind(_this);
@@ -32839,6 +32842,9 @@ var SubscriptionComponent = /** @class */ (function (_super) {
         return !(subscription.process || subscription.active);
     };
     SubscriptionComponent.prototype._isDefined = function (value) { return typeof value !== 'undefined'; };
+    SubscriptionComponent.prototype._isNumber = function (value) {
+        return !isNaN(parseFloat(value));
+    };
     SubscriptionComponent.prototype.handleChangeActivation = function (event) {
         var subscription = this.state.subscription;
         subscription.active = event.target.checked;
@@ -32877,12 +32883,22 @@ var SubscriptionComponent = /** @class */ (function (_super) {
         }
     };
     SubscriptionComponent.prototype.handleDeviationChange = function (event) {
-        this.state.subscription.deviation = (event.target.validity.valid) ? event.target.value : this.state.subscription.deviation;
+        var value = event.target.value;
+        this.setState({ subscription: Object.assign({}, Object.assign(this.state.subscription, { deviation: value })) });
+    };
+    SubscriptionComponent.prototype.handleDeviationBlur = function (event) {
+        var value = event.target.value;
+        this.state.subscription.deviation = numberPattern.test(value) ? value : 0;
+        this.setState({ subscription: Object.assign({}, this.state.subscription) });
+    };
+    SubscriptionComponent.prototype.handleValueBlur = function (event) {
+        var value = event.target.value;
+        this.state.subscription.value = numberPattern.test(value) ? value : 0;
         this.setState({ subscription: Object.assign({}, this.state.subscription) });
     };
     SubscriptionComponent.prototype.handleValueChange = function (event) {
-        this.state.subscription.value = (event.target.validity.valid) ? event.target.value : this.state.subscription.value;
-        this.setState({ subscription: Object.assign({}, this.state.subscription) });
+        var value = event.target.value;
+        this.setState({ subscription: Object.assign({}, Object.assign(this.state.subscription, { value: value })) });
     };
     SubscriptionComponent.prototype.comparisonTypeChangeHandle = function (value) {
         var subscription = this.state.subscription;
@@ -32925,10 +32941,10 @@ var SubscriptionComponent = /** @class */ (function (_super) {
                         })),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null, "Your subscription comparison type")),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-field subscription__input" },
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { disabled: !this.isInputActive(), id: "subscription_value", type: "text", pattern: "[0-9]*", value: subscription.value, onInput: this.handleValueChange }),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { disabled: !this.isInputActive(), id: "subscription_value", onBlur: this.handleValueBlur, value: subscription.value, onChange: this.handleValueChange }),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "subscription_value", className: this._isDefined(subscription.value) ? 'active' : '' }, "Your subscription value")),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-field subscription__input" },
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { id: "subscription_deviation", type: "text", pattern: "[0-9]*", disabled: !this.isInputActive(), value: subscription.deviation, onInput: this.handleDeviationChange }),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { id: "subscription_deviation", disabled: !this.isInputActive(), value: subscription.deviation, onBlur: this.handleDeviationBlur, onChange: this.handleDeviationChange }),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "subscription_deviation", className: this._isDefined(subscription.deviation) ? 'active' : '' }, "Your subscription deviation")))));
     };
     return SubscriptionComponent;
@@ -66001,4 +66017,4 @@ if (true) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.74ecde35.js.map
+//# sourceMappingURL=main.1dfd2caa.js.map
