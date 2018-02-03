@@ -21836,7 +21836,7 @@ var where = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0__internal_curry2__["
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__storage_service__ = __webpack_require__(517);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces__ = __webpack_require__(813);
 
-var configName = Object({"NODE_ENV":"production","PUBLIC_URL":"https://logovazzik.github.io/push.client"}).ENV === 'production' ? 'release' : 'dev';
+var configName =  true ? 'release' : 'dev';
 var config = __webpack_require__(514)("./" + configName + ".json");
 
 
@@ -66001,4 +66001,4 @@ if (true) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.cd4619b2.js.map
+//# sourceMappingURL=main.74ecde35.js.map
