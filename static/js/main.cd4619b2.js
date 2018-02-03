@@ -32736,7 +32736,7 @@ var AppComponent = /** @class */ (function (_super) {
     };
     AppComponent.prototype.noAvailableSubscriptions = function () {
         return __WEBPACK_IMPORTED_MODULE_2__services_subscriptions_service__["a" /* default */].subscriptions.length
-            >= __WEBPACK_IMPORTED_MODULE_2__services_subscriptions_service__["a" /* default */].metadata.subscriptionTypes.length;
+            >= __WEBPACK_IMPORTED_MODULE_2__services_subscriptions_service__["a" /* default */].metadata.subscriptions.length;
     };
     AppComponent.prototype._addSubscription = function () {
         __WEBPACK_IMPORTED_MODULE_2__services_subscriptions_service__["a" /* default */].addSubscription();
@@ -32913,8 +32913,8 @@ var SubscriptionComponent = /** @class */ (function (_super) {
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-field subscription__input" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { ref: function (select) { return _this.nativeElements.subscriptionType = select; }, disabled: !this.isInputActive(), className: "subscription__select subscription__type" },
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "", disabled: true, selected: true }, "Choose type"),
-                        metadata.subscriptionTypes.map(function (type, index) {
-                            return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: type, disabled: choosenTypes.indexOf(type) > -1, key: index, selected: type === subscription.type }, type);
+                        metadata.subscriptions.map(function (subscriptionMeta, index) {
+                            return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: subscriptionMeta.type, disabled: choosenTypes.indexOf(subscriptionMeta.type) > -1, key: index, selected: subscriptionMeta.type === subscription.type }, subscriptionMeta.displayName);
                         })),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null, "Your subscription type")),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-field subscription__input" },
@@ -52553,7 +52553,6 @@ exports.zipAll = zipAll_1.zipAll;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubscriptionModel; });
 var SubscriptionModel = /** @class */ (function () {
     function SubscriptionModel(subscription) {
-        debugger;
         if (subscription.uid) {
             this.uid = subscription.uid;
         }
@@ -66002,4 +66001,4 @@ if (true) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.50a97c5f.js.map
+//# sourceMappingURL=main.cd4619b2.js.map
