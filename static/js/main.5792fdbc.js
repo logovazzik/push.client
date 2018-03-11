@@ -32915,11 +32915,11 @@ var SubscriptionComponent = /** @class */ (function (_super) {
         return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "card-panel white z-depth-1 subscription" },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "subscription-header" },
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "subscription-header__table" },
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "switch subscription-header__cell" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "subscription-header__cell" },
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "btn btn-floating left", onClick: this.handleDelete },
                             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "material-icons  deep-purple-text text-lighten-5" }, "delete"))),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "switch subscription-header__cell" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "right" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "right subscription-header__switch" },
                             subscription.process ? subscription.active ?
                                 'Activating' : 'Deactivating'
                                 : subscription.active ? 'Active' : 'Inactive',
@@ -40949,7 +40949,7 @@ exports = module.exports = __webpack_require__(70)(undefined);
 
 
 // module
-exports.push([module.i, ".subscription-header {\n  border-bottom: 1px solid rgba(160, 160, 160, 0.2);\n  padding: 0 16px 16px 0;\n}\n.subscription-header__table {\n  width: 100%;\n  display: table;\n}\n.subscription {\n  margin-top: 0 !important;\n}\n.subscription-header__cell {\n  display: table-cell;\n  vertical-align: middle;\n  width: 50%;\n}\n", ""]);
+exports.push([module.i, ".subscription-header {\n  border-bottom: 1px solid rgba(160, 160, 160, 0.2);\n  padding: 0 0 16px 0;\n}\n.subscription-header__table {\n  width: 100%;\n  display: table;\n}\n.subscription {\n  margin-top: 0 !important;\n}\n.subscription-header__cell {\n  display: table-cell;\n  vertical-align: middle;\n  width: 50%;\n}\n.subscription-header__switch {\n  margin-right: -16px;\n}\n", ""]);
 
 // exports
 
@@ -41055,41 +41055,10 @@ module.exports = function (css) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return applyTemplate; });
-/* unused harmony export subscribers */
 var applyTemplate = function (template, replacements) {
     return template.replace(/{(\w+)}/g, function (e, n) {
         return undefined !== replacements[n] ? encodeURIComponent(replacements[n]) : "";
     });
-};
-var subscribers = {
-    "subscribers": [
-        {
-            "token": "e5N2WjboO_4:APA91bG_PmUQ_emZzi1Vq2tx2JFqJo0kbwMmW7OS9IvixPyv8HZ3MclS5HAfthFZMZUloQ5TF8LFzmoTuW1GYW70QIRDjzwpF2HXZ84L-fsHHSp8TH5klvJvZrzkPEqHLQsnL3QyYtBf",
-            "ua": "Mozilla/5.0 (Linux; Android 7.1.1; Nexus 6 Build/N6F27M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36",
-            "subscriptions": [
-                {
-                    "type": "BCH",
-                    "value": 0,
-                    "deviation": 20,
-                    "comparison": "Greater",
-                    "lastValue": 1437.5
-                }
-            ]
-        },
-        {
-            "token": "fXi7gRR3pQE:APA91bFwfB1Gu4lZoWbBlePfX7ADMuJGqfPKAe9LVBjqVya--TrPodMf1WcsAiALZ2u_KwLnkLW8cGIlJRQlmB4j6rdwmwwTq0oyg4pUpxdOGkBDZSP6Zr-Vdgk3NbPKof6c7MdJ-J5Q",
-            "ua": "Mozilla/5.0 (Linux; Android 7.1.1; Nexus 6 Build/N6F27M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36",
-            "subscriptions": [
-                {
-                    "type": "BCH",
-                    "value": 0,
-                    "deviation": 20,
-                    "comparison": "Greater",
-                    "lastValue": 1437.5
-                }
-            ]
-        }
-    ]
 };
 
 
@@ -66017,4 +65986,4 @@ if (true) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.1dfd2caa.js.map
+//# sourceMappingURL=main.5792fdbc.js.map
